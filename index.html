@@ -1,52 +1,52 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consensus - Minecraft 化学增强辅助</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #00ff9d;
-            --secondary: #0099ff;
-            --accent: #ff00d6;
-            --dark-bg: #0a0e14;
-            --darker-bg: #05080c;
-            --card-bg: #141920;
-            --text: #e0e0e0;
+column
+<超文本标记语言 语言=“zh-CN”zh-CN
+<头>
+    <自指的 字符集=“UTF八号”“UTF八号"
+    <自指的 名字="视窗" 内容=宽度=设备宽度，初始比例=1.0>
+    <标题>共识-《我的世界》化学增强辅助</标题>
+    <环 能量损耗率="样式表" href=" https://cdnjs .云层耀斑com/Ajax/libs/font-awesome/6 .4 .0/CSS/all .量滴CSS "" https://cdnjs .云层耀斑com/Ajax/libs/font-awesome/6 .4 .0/CSS/all .量滴CSS "
+    <风格>
+        :根 {
+            -初级:# 00ff9d
+            -中学:# 0099ff
+            -口音:# ff00d6
+            -黑暗-背景:# 0a0e14
+            -深色-bg:# 05080c
+            -卡片-背景: #141920;
+            -文本:# e0e0e0
         }
         
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            边缘: 0;
+            填料: 0;
+            盒子尺寸: 边框;
+            字体系列: ' Segoe UI ', 前面有突出的护架, 日内瓦, 韦尔达纳, 无衬线字体;
         }
         
-        body {
-            background-color: var(--dark-bg);
-            color: var(--text);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(0, 255, 157, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 60%, rgba(0, 153, 255, 0.05) 0%, transparent 20%);
-            overflow-x: hidden;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        身体 {
+            背景颜色: 定义变量(-黑暗-背景);
+            颜色: 定义变量(-文本);
+            背景图像: 
+                径向梯度(圆 在 10% 20%, rgba(0, 255, 157, 0.05) 0%, 透明的 20%),
+                径向梯度(圆 在 90% 60%, rgba(0, 153, 255, 0.05) 0%, 透明的 20%);
+            溢出-x: 隐藏的;
+            最小高度: 100vh;
+            显示: 弯曲;
+            弯曲方向: 圆柱;
         }
         
         .container {
             max-width: 1200px;
-            margin: 0 auto;
             padding: 0 20px;
-        }
-        
-        header {
-            background-color: var(--darker-bg);
-            padding: 15px 0;
+填充:0 20px
             border-bottom: 1px solid rgba(0, 255, 157, 0.2);
-            position: sticky;
-            top: 0;
+        
+标题{
+背景色:var(-darker-BG)；
+填充:15px 0；
+border-bottom: 1px solid rgba(0，255，157，0.2)；
+位置:粘性；
+top:0；
             z-index: 100;
         }
         
@@ -60,8 +60,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 24px;
-            font-weight: bold;
+字体大小:24px
+差距:10px
             color: var(--primary);
             text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
         }
@@ -177,7 +177,7 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
-        }
+            justify-content: center;
         
         .cta-button {
             display: inline-block;
@@ -257,7 +257,7 @@
         
         .potion-bubble {
             position: absolute;
-            background-color: rgba(255, 255, 255, 0.8);
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
             border-radius: 50%;
             animation: bubble 4s infinite ease-in-out;
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
@@ -290,7 +290,7 @@
         .potion-bubble:nth-child(4) {
             width: 6px;
             height: 6px;
-            bottom: 110px;
+            background: linear-gradient(45deg, rgba(0, 255, 157, 0.7), rgba(0, 153, 255, 0.7));
             left: 50%;
             animation-delay: 3s;
         }
@@ -343,7 +343,7 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
             border: 1px solid rgba(0, 255, 157, 0.1);
-        }
+                rgba(255, 255, 255, 0.6) 50%,
         
         .highlight-card:hover {
             transform: translateY(-10px);
@@ -631,65 +631,65 @@
             <nav>
                 <div class="logo">
                     <div class="logo-icon">C</div>
-                    <span>Consensus</span>
-                </div>
-                <div class="nav-links">
-                    <a href="index.html">首页</a>
-                    <a href="function.html">功能</a>
-                    <a href="buy.html">购买</a>
-                    <a href="download.html">下载</a>
-                    <a href="about.html">关于</a>
-                    <a href="support.html">支持</a>
-                    <a href="privacy.html">隐私政策</a>
-                    <a href="use.html">使用条款</a>
-                    <a href="contact.html">联系我们</a>
-                </div>
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
+                    <跨度>共识；一致</跨度>
+                </差异>
+                <差异 班级="导航链接">
+                    <a href=《index.html》>首页</a>
+                    <a href=《函数. html》”>功能</a>
+                    <a href=《购买. html》”>购买</a>
+                    <a href=《下载. html》”>下载</a>
+宽度:35px .页脚链接{a href="about.html " >关于</a>
+                    <a href=《支持. html》”>支持</a>
+                    <a href=《隐私. html》”>隐私政策</a>
+                    <a href="使用。html ">使用条款</a>
+                    <a href=《联系人. html》”>联系我们</a>
+                </差异>
+                <按钮 班级="手机-菜单-btn ">
+                    <我 班级=" Fas fa-bar "></我>
+                </按钮>
+            </航行>
+        </差异>
+    </页眉>
     
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Consensus化学增强</h1>
-                    <p>高科技Minecraft辅助工具，融合化学元素与先进技术，为您提供前所未有的游戏体验。探索、创造、征服，一切尽在掌握。</p>
-                    <div class="button-group">
-    <a href="buy.html" class="cta-button">立即购买</a>
-    <a href="function.html" class="secondary-button">查看全部功能</a>
-    <a href="download.html" class="secondary-button">
-        <i class="fas fa-download"></i> 下载
+    <部分 班级=《英雄》>
+        <差异 班级="集装箱">
+            <差异 班级=“英雄-内容”>
+                <差异 班级=“英雄-正文”>
+                    <氕>共识；一致化学增强</氕>
+                    <p>强大的手机端《我的世界》辅助模块,让您的移动游戏世界充满无限可能。体验前所未有的游戏辅助功能,解锁创意的无限潜能。</p>
+                    <差异 班级="按钮组">
+    <a href=《购买. html》” 班级=“cta按钮">立即购买</a>
+    <a href=《函数. html》” 班级="辅助按钮">查看全部功能</a>
+    <a href=《下载. html》” 班级="辅助按钮">
+        <我 班级=" Fas fa-下载"></我> 下载
     </a>
-</div>
-                </div>
-                
-                <div class="potion-container">
-                    <div class="potion">
-                        <div class="potion-bottle"></div>
-                        <div class="potion-liquid"></div>
-                        <div class="potion-refraction"></div>
-                        <div class="potion-bubble"></div>
-                        <div class="potion-bubble"></div>
-                        <div class="potion-bubble"></div>
-                        <div class="potion-bubble"></div>
-                        <div class="potion-glow"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="chemical-element element-1"></div>
-        <div class="chemical-element element-2 floating"></div>
-    </section>
+</差异>
+。页脚-链接{</差异>
+。页脚-链接{
+                <差异 班级=“药水容器”>
+                    <差异 班级=“魔药”>
+                        <差异 班级=“药水瓶”></差异>
+                        <差异 班级=“药水-液体”></差异>
+                        <差异 班级=“魔药-折射”></差异>
+                        <差异 班级=“药水泡泡”></差异>
+                        <差异 班级=“药水泡泡”></差异>
+                        <差异 班级=“药水泡泡”></差异>
+                        <差异 班级=“药水泡泡”></差异>
+                        <差异 班级=“药剂-发光”></差异>
+                    </差异>
+                </差异>
+            </差异>
+        </差异>
+        <差异 班级=“化学元素元素-1”></差异>
+        <差异 班级=“化学元素元素-2浮动”></差异>
+    </部分>
     
-    <section class="highlights">
-        <div class="container">
-            <h2 class="section-title">核心特点</h2>
+    <部分 班级="亮点">
+        <差异 班级="集装箱">
+            <氘 班级="章节标题">核心特点</氘>
             
-            <div class="highlights-grid">
-                <div class="highlight-card">
+            <差异 班级="突出显示-网格">
+                <差异 班级="亮点-卡片">
                     <div class="highlight-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
