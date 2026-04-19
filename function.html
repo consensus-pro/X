@@ -5,29 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>功能特性 - Consensus</title>
+    <script>document.documentElement.style.zoom=0.85;</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const params = new URLSearchParams(window.location.search);
-    const iValue = params.get("i");
-    if (iValue) {
-        document.querySelectorAll('a[href]').forEach(a => {
-            let href = a.getAttribute('href');
-
-            if (!href.startsWith('http') && !href.startsWith('#')) {
-                if (href.includes('?')) {
-                    href += '&i=' + encodeURIComponent(iValue);
-                } else {
-                    href += '?i=' + encodeURIComponent(iValue);
-                }
-
-                a.setAttribute('href', href);
-            }
-        });
-    }
-});
-</script>
-
     <style>
         :root {
             --primary: #00ff9d;
@@ -339,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3><span class="feature-status"></span>Consensus|Release|Atom<c>83*</c></h3><p>
+                    <h3><span class="feature-status"></span>Consensus|Release|Atom<c>85*</c></h3><p>
 [✔]<x>中文模式</x>——<i>中英文语言切换※</i><br />
 [✔]<x>PVP类</x>——<i>功能模块面板*#PVP</i><br />
 [✔]<x>杂项类</x>——<i>功能模块面板*#杂项</i><br />
@@ -350,13 +329,14 @@ document.addEventListener('DOMContentLoaded', function() {
 [✔]<x>设置</x>——<i>功能模块面板*#设置</i></p>
                 </div>
                 <div class="feature-card">
-                    <h3><span class="feature-status"></span>PVP类功能<c>9*</c></h3><p>
+                    <h3><span class="feature-status"></span>PVP类功能<c>10*</c></h3><p>
 [✔]<x>自瞄</x>——<i>自动将准心瞄准范围内的玩家</i><br />
 [✔]<x>连点器</x>——<i>自动点击屏幕达到映射效果</i><br />
 [✔]<x>暴击</x>——<i>攻击玩家时触发1.5倍暴击伤害</i><br />
 [✔]<x>碰撞箱</x>——<i>修改玩家脚下的碰撞箱参数</i><br />
 [✔]<x>百米大刀</x>——<i>攻击全房间内所有的玩家</i><br />
 [✔]<x>杀戮光环</x>——<i>自动攻击周围的玩家实体</i><br />
+[✔]<x>刀刀重锤</x>——<i>重锤攻击时触发秒杀效果</i><br />
 [✔]<x>长臂猿</x>——<i>扩大玩家原始攻击距离参数</i><br />
 [✔]<x>传送光环</x>——<i>传送最近玩家环绕或锁背</i><br />
 [✔]<x>队伍</x>——<i>功能不对自家的队友产生效果</i></p>
@@ -406,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
 [✔]<x>物品复制</x>——<i>自动复制玩家手持的物品</i></p>
                 </div>
                 <div class="feature-card">
-                    <h3><span class="feature-status"></span>视觉类功能<c>17*</c></h3><p>
+                    <h3><span class="feature-status"></span>视觉类功能<c>18*</c></h3><p>
 [✔]<x>手部动画</x>——<i>添加玩家挥刀的防砍效果</i><br />
 [✔]<x>视野</x>——<i>修改优化玩家的FOV视野范围</i><br />
 [✔]<x>破坏进度</x>——<i>优化绘制挖掘方块的进度</i><br />
@@ -423,7 +403,8 @@ document.addEventListener('DOMContentLoaded', function() {
 [✔]<x>实体连线</x>——<i>绘制玩家线条连接到准心</i><br />
 [✔]<x>落地圆圈</x>——<i>玩家落地的圆圈波纹效果</i><br />
 [✔]<x>运动尾巴</x>——<i>添加玩家移动时的拖尾条</i><br />
-[✔]<x>夜视</x>——<i>添加玩家无线的夜视药水效果</i></p>
+[✔]<x>夜视</x>——<i>添加玩家无线的夜视药水效果</i><br />
+[✔]<x>反隐身</x>——<i>优化视野并显示隐身的实体</i></p>
                 </div>
                 <div class="feature-card">
                     <h3><span class="feature-status"></span>世界类功能<c>12*</c></h3><p>

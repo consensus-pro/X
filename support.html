@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>支持 - Consensus</title>
+    <script>document.documentElement.style.zoom=0.85;</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -144,7 +145,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            align-items: flex-start;
             padding: 40px 20px;
         }
         
@@ -225,6 +226,7 @@
             border-top: 1px solid rgba(0, 255, 157, 0.3);
             font-size: 1.1rem;
             color: #0099ff;
+            text-align: center;
         }
         
         .decoration {
@@ -245,6 +247,49 @@
             bottom: -50px;
             right: -50px;
             background: radial-gradient(circle, #0099ff 0%, transparent 70%);
+        }
+        .donate-btn {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: var(--darker-bg);
+            font-weight: bold;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 255, 157, 0.3);
+            margin: 20px auto;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            text-align: center;
+        }
+        
+        .donate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 255, 157, 0.5);
+        }
+        .donate-btn .row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .donate-btn img {
+            width: 180px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+        .download-info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            text-align: center;
         }
         
         footer {
@@ -318,7 +363,6 @@
             </nav>
         </div>
     </header>
-
     <div class="main-content">
         <a href="index.html" class="back-button">
             <i class="fas fa-arrow-left"></i> 返回首页
@@ -333,6 +377,11 @@
             <h2>运营支持提供 by Nz15</h2>
             
             <p>感谢所有用户对Consensus的支持 我们会尽量优化使用户获得最佳体验</p>
+            <div style="text-align: center;">
+                <button class="donate-btn" id="donateBtn">
+                    <div class="row">ㅤㅤ<i class="fas fa-donate"></i>立即赞助ㅤㅤ</div>
+                </button>
+            </div>
             
             <div class="signature">
                 特此感谢：<br>
@@ -340,7 +389,6 @@
             </div>
         </div>
     </div>
-
     <footer>
         <div class="header-container">
             <div class="footer-links">
@@ -359,7 +407,6 @@
             <p>&copy; 2025 Consensus . 保留所有权利.</p>
         </div>
     </footer>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -383,24 +430,19 @@
             });
         });
     </script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const params = new URLSearchParams(window.location.search);
-            const iValue = params.get("i");
-            if (iValue) {
-                document.querySelectorAll('a[href]').forEach(a => {
-                    let href = a.getAttribute('href');
-                    if (!href.startsWith('http') && !href.startsWith('#')) {
-                        if (href.includes('?')) {
-                            href += '&i=' + encodeURIComponent(iValue);
-                        } else {
-                            href += '?i=' + encodeURIComponent(iValue);
-                        }
-                        a.setAttribute('href', href);
-                    }
-                });
-            }
+            const btn = document.getElementById('donateBtn');
+            let isOriginal = true;
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (isOriginal) {
+                    btn.innerHTML = '<div class="row"><i class="fas fa-donate"></i>立即赞助</div><img src="https://i.imgs.ovh/2026/04/19/ZBnm4N.png" alt="icon">';
+                } else {
+                    btn.innerHTML = '<div class="row">ㅤㅤ<i class="fas fa-donate"></i>立即赞助ㅤㅤ</div>';
+                }
+                isOriginal = !isOriginal;
+            });
         });
     </script>
 </body>

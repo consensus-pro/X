@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Consensus - 下载验证</title>
+   <script>document.documentElement.style.zoom=0.85;</script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
    <style>
        :root {
@@ -499,13 +500,11 @@
                <h1>下载 Consensus</h1>
                <div class="download-info">
                    <p>感谢您完成验证，现在可以下载 Consensus 了</p>
-                   <p>最新版本文件大小: 18.85 MB | 版本: 0.1.8</p>
+                   <p>最新版本文件大小: 19.95 MB | 版本: 0.1.9</p>
+                   <p>最后更新时间:2026.4.18 | 更新日志: [+]反隐身</p>
                </div>
                <a href="#" class="download-btn" id="downloadBtn">
                    <i class="fas fa-download"></i> 立即下载
-               </a>
-               <a href="https://wwwk.qyshare.com:2083/api/share/download?token=7nwvxi&fileId=640197&hostId=4" class="backup-download-btn" id="backupDownloadBtn">
-                   <i class="fas fa-cloud-download-alt"></i> 无法下载？点击备用下载
                </a>
                <div class="download-timer" id="downloadTimer">5秒后自动跳转...</div>
                <div class="countdown">如果下载没有自动开始，请点击上面的下载按钮</div>
@@ -652,7 +651,7 @@
                downloadSec.style.display = 'block';
                downloadBtn.addEventListener('click', e => {
                    e.preventDefault();
-                   window.location.href = 'https://wwwk.qyshare.com:2083/api/share/download?token=7nwvxi&fileId=640197&hostId=1';
+                   window.location.href = 'https://wwwk.qyshare.com:2083/api/share/download?token=Consensus&fileId=740456&hostId=4';
                });
                let sec = 5;
                const timer = setInterval(() => {
@@ -660,7 +659,8 @@
                    downloadTimer.textContent = `${sec}秒后自动跳转...`;
                    if (sec <= 0) {
                        clearInterval(timer);
-                       window.location.href = 'https://wwwk.qyshare.com:2083/api/share/download?token=7nwvxi&fileId=640197&hostId=1';
+                       window.location.href = 'https://wwwk.qyshare.com:2083/api/share/download?token=Consensus&fileId=740456&hostId=1';
+                       downloadTimer.textContent = `接口请求成功！加载APK中...`;
                    }
                }, 1000);
            }
